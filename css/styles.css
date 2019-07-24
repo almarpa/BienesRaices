@@ -67,6 +67,10 @@
 }
 
 /* Header */
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
 .site-header.inicio {
     background-image: url(../img/header.jpg);
     background-position: center center;
@@ -127,19 +131,21 @@
 .contenedor-anuncios {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  
 }
 .anuncio { 
-    flex-basis: calc(33.3% - 1rem);
-    margin-right: 1rem;
+    flex-basis: calc(33% - 1rem);
     border: 1px solid #B5B5B5;
     background-color:  #F5F5F5;
+    margin-bottom: 1rem;
 }
-
 .contenido-anuncio {
     padding: 2rem;
 }
 .contenido-anuncio h3, 
-.contenido-anuncio p{
+.contenido-anuncio p {
     margin: 0;
 }
 .precio {
@@ -156,7 +162,8 @@
     display: flex;
 }
 .iconos-caracteristicas li img {
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-right: 1rem;
 }
 .ver-todas {
     display: flex;
@@ -281,4 +288,14 @@
 .copyright {
     margin: 0;
     color: #ffffff;
+}
+
+/**INTERNAS **/
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+}
+.texto-nosotros {
+    font-weight: 900;
 }
